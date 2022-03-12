@@ -1,10 +1,10 @@
 const tape = require('tape')
 const { WriteStream, ReadStream } = require('./')
 const ram = require('random-access-memory')
-const hypercore = require('hypercore')
+const unichain = require('@web4/unichain')
 
 tape('basic readstream', function (t) {
-  const feed = hypercore(ram)
+  const feed = unichain(ram)
 
   feed.append(['a', 'b', 'c'], function () {
     const rs = new ReadStream(feed)
@@ -20,7 +20,7 @@ tape('basic readstream', function (t) {
 })
 
 tape('tail reading stream', function (t) {
-  const feed = hypercore(ram)
+  const feed = unichain(ram)
   t.plan(2)
 
   feed.append(['a', 'b', 'c'], function () {
@@ -44,7 +44,7 @@ tape('tail reading stream', function (t) {
 tape('live readstream', function (t) {
   t.plan(2)
 
-  const feed = hypercore(ram)
+  const feed = unichain(ram)
 
   feed.append(['a', 'b', 'c'], function () {
     const rs = new ReadStream(feed, { start: 1, live: true })
@@ -62,7 +62,7 @@ tape('live readstream', function (t) {
 tape('basic writestream', function (t) {
   t.plan(1 + 2 * 3)
 
-  const feed = hypercore(ram)
+  const feed = unichain(ram)
 
   const ws = new WriteStream(feed)
 
@@ -93,7 +93,7 @@ tape('basic writestream', function (t) {
 })
 
 tape('valueEncoding test', function (t) {
-  const feed = hypercore(ram, { valueEncoding: 'json' })
+  const feed = unichain(ram, { valueEncoding: 'json' })
 
   feed.append(['a', 'b', 'c'], function () {
     const rs = new ReadStream(feed, { valueEncoding: 'buffer' })

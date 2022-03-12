@@ -1,13 +1,13 @@
 {
-  "name": "hypercore-streams",
-  "version": "1.0.1",
-  "description": "External implementation of a WriteStream and ReadStream for Hypercore",
+  "name": "@web4/unichain-streams",
+  "version": "1.0.0",
+  "description": "External implementation of a WriteStream and ReadStream for Unichain",
   "main": "index.js",
   "dependencies": {
     "streamx": "^2.6.0"
   },
   "devDependencies": {
-    "hypercore": "^9.2.1",
+    "@web4/unichain": "^1.0.0",
     "random-access-memory": "^3.1.1",
     "standard": "^14.3.4",
     "tape": "^5.0.1"
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/hypercore-streams.git"
+    "url": "https://github.com/bitwebs/unichain-streams.git"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/hypercore-streams/issues"
+    "url": "https://github.com/bitwebs/unichain-streams/issues"
   },
-  "homepage": "https://github.com/mafintosh/hypercore-streams"
+  "homepage": "https://github.com/bitwebs/unichain-streams"
 }

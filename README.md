@@ -1,15 +1,15 @@
-# hypercore-streams
+# unichain-streams
 
-External implementation of a WriteStream and ReadStream for Hypercore
+External implementation of a WriteStream and ReadStream for Unichain
 
 ```
-npm install hypercore-streams
+npm install @web4/unichain-streams
 ```
 
 ## Usage
 
 ``` js
-const { WriteStream, ReadStream } = require('hypercore-streams')
+const { WriteStream, ReadStream } = require('@web4/unichain-streams')
 
 const ws = new WriteStream(feed)
 const rs = new ReadStream(feed, {
